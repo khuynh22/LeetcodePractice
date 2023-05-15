@@ -5,12 +5,12 @@ class Solution:
         missing = lambda idx: nums[idx] - nums[0] - idx
         if k > missing(r) : return nums[-1]+k - missing(r)
         
-        while r-l>1 :
+        while r - l > 1:
             mid = l + (r-l)//2
             x = missing(mid) 
-            if x>=k:
+            if x >= k:
                 r = mid
-            elif x<k:
+            elif x < k:
                 l = mid
        
         return nums[l] + k - missing(l)
