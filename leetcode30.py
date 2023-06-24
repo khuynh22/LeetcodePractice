@@ -1,6 +1,7 @@
 from functools import reduce
 import textwrap
 
+
 class Solution:
     def findSubstring(self, s: str, words):
         word_length = len(words[0])
@@ -22,9 +23,11 @@ class Solution:
                         result_indexes.append(i)
 
         return result_indexes
-    
+
+
 s = Solution()
-print(s.findSubstring("barfoothefoobarman", ["foo","bar"]))
-print(s.findSubstring("wordgoodgoodgoodbestword", ["word","good","best","word"]))
-print(s.findSubstring("barfoofoobarthefoobarman", ["bar","foo","the"]))
-print(s.findSubstring("foobarfoobar", ["foo","bar"]))
+print(s.findSubstring("barfoothefoobarman", ["foo", "bar"]))
+print(s.findSubstring("wordgoodgoodgoodbestword",
+      ["word", "good", "best", "word"]))
+print(s.findSubstring("barfoofoobarthefoobarman", ["bar", "foo", "the"]))
+print(s.findSubstring("foobarfoobar", ["foo", "bar"]))

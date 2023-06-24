@@ -19,7 +19,3 @@ class Solution:
 
             print(checkStr)
         return res
-
-
-
-        

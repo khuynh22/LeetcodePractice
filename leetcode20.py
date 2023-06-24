@@ -20,7 +20,8 @@ class Solution:
                 else:
                     return False
         return True if len(stack) == 0 else False
-    
+
+
 s = Solution()
 print(s.isValid("()"))
 print(s.isValid("()[]{}"))

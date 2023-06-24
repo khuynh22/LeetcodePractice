@@ -21,11 +21,12 @@ class Solution:
                 l = mid + 1
             else:
                 r = mid - 1
-        
+
         return i
-    
+
+
 # Test cases:
 s = Solution()
-print(s.searchRange([5,7,7,8,8,10], 8))
-print(s.searchRange([5,7,7,8,8,10], 6))
+print(s.searchRange([5, 7, 7, 8, 8, 10], 8))
+print(s.searchRange([5, 7, 7, 8, 8, 10], 6))
 print(s.searchRange([], 0))

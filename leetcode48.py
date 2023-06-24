@@ -5,7 +5,7 @@ class Solution:
         """
         self.transpose(matrix)
         self.reverseMatrix(matrix)
-    
+
     def reverseMatrix(self, matrix):
         for i in range(len(matrix)):
             start = 0
@@ -14,7 +14,7 @@ class Solution:
                 matrix[i][start], matrix[i][end] = matrix[i][end], matrix[i][start]
                 start += 1
                 end -= 1
-    
+
     def transpose(self, matrix):
         for i in range(len(matrix)):
             for j in range(i + 1, len(matrix)):

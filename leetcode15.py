@@ -5,7 +5,7 @@ class Solution:
                 return [nums]
             else:
                 return []
-        
+
         nums.sort()
         res = []
         i = 0
@@ -28,8 +28,9 @@ class Solution:
                         l += 1
             i += 1
         return res
-    
+
+
 s = Solution()
-print(s.threeSum([-1,0,1,2,-1,-4]))
-print(s.threeSum([0,1,1]))
-print(s.threeSum([0,0,0]))
+print(s.threeSum([-1, 0, 1, 2, -1, -4]))
+print(s.threeSum([0, 1, 1]))
+print(s.threeSum([0, 0, 0]))
