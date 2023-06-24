@@ -2,7 +2,7 @@ class Solution:
     def canCompleteCircuit(self, gas, cost) -> int:
         if sum(gas) < sum(cost):
             return -1
-        
+
         total = 0
         res = 0
         for i in range(len(gas)):
@@ -15,5 +15,5 @@ class Solution:
 
 
 s = Solution()
-print(s.canCompleteCircuit([1,2,3,4,5], [3,4,5,1,2]))
-print(s.canCompleteCircuit([2,3,4], [3,4,3]))
+print(s.canCompleteCircuit([1, 2, 3, 4, 5], [3, 4, 5, 1, 2]))
+print(s.canCompleteCircuit([2, 3, 4], [3, 4, 3]))

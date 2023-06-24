@@ -39,8 +39,9 @@ class Solution:
                 p2 += 1
 
         return stack1 == stack2
-       
-s = Solution()         
+
+
+s = Solution()
 print(s.backspaceCompare("ab#c", "ad#c"))
 print(s.backspaceCompare("ab##", "c#d#"))
 print(s.backspaceCompare("a#c", "b"))

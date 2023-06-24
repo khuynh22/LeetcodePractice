@@ -1,4 +1,6 @@
 import random
+
+
 class RandomizedSet:
 
     def __init__(self):
@@ -10,19 +12,19 @@ class RandomizedSet:
             self.arrMap[val] = len(self.arr)
             self.arr.append(val)
             return True
-        
+
         return False
 
     def remove(self, val: int) -> bool:
         if not val in self.arrMap:
             return False
-        
+
         last_element = self.arr[-1]
         index_remove = self.arrMap[val]
 
         self.arrMap[last_element] = index_remove
         self.arr[index_remove] = last_element
-        
+
         self.arr[-1] = val
         self.arr.pop()
 

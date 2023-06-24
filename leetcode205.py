@@ -11,7 +11,8 @@ class Solution:
             else:
                 isoMap[s[i]] = t[i]
         return True
-    
+
+
 s = Solution()
 print(s.isIsomorphic("egg", "add"))
 print(s.isIsomorphic("foo", "bar"))

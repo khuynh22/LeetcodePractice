@@ -2,8 +2,8 @@ class Solution:
     def removeDuplicates(self, nums) -> int:
         if len(nums) < 2:
             return len(nums)
-    
-        count = 0 
+
+        count = 0
         slow = 0
         fast = 2
         while fast < len(nums):
@@ -17,5 +17,3 @@ class Solution:
 
         nums.sort()
         return len(nums) - count
-
-    

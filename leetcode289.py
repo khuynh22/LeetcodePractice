@@ -29,11 +29,10 @@ class Solution:
                         board[r][c] = 3
                 elif neighbors == 3:
                     board[r][c] = 2
-            
+
         for r in range(rows):
             for c in range(cols):
                 if board[r][c] == 1:
                     board[r][c] = 0
                 elif board[r][c] in [2, 3]:
                     board[r][c] = 1
-                

@@ -9,6 +9,7 @@ class Solution:
             n = sum(i**2 for i in numList)
         return True
 
+
 s = Solution()
 print(s.isHappy(19))
 print(s.isHappy(2))

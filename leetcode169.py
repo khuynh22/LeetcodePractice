@@ -1,5 +1,6 @@
 class Solution:
     import math
+
     def majorityElement(self, nums: List[int]) -> int:
         res = {}
         for i in range(len(nums)):
@@ -10,5 +11,3 @@ class Solution:
 
             if res[nums[i]] > math.floor(len(nums) / 2):
                 return nums[i]
-            
-

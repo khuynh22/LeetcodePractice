@@ -11,7 +11,8 @@ class Solution:
         # return nums[l]
         return min(nums)
 
+
 s = Solution()
-print(s.findMin([3,4,5,1,2]))
-print(s.findMin([4,5,6,7,0,1,2]))
-print(s.findMin([11,13,15,17]))
+print(s.findMin([3, 4, 5, 1, 2]))
+print(s.findMin([4, 5, 6, 7, 0, 1, 2]))
+print(s.findMin([11, 13, 15, 17]))

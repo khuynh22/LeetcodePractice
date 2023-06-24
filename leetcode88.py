@@ -10,7 +10,8 @@ class Solution:
 
         nums1.sort()
 
+
 s = Solution()
-print(s.merge([1,2,3,0,0,0], 3, [2,5,6], 3))
+print(s.merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3))
 print(s.merge([1], 1, [], 0))
 print(s.merge([0], 0, [1], 1))

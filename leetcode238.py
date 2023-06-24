@@ -8,7 +8,5 @@ class Solution:
                 res[i] *= int(allProd / nums[i])
             else:
                 res[i] *= prod(nums[:i]) * prod(nums[i + 1:])
-        
 
         return res
-        

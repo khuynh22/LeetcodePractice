@@ -22,5 +22,5 @@ class Solution:
             dp[i] = [maxLen, maxCnt]
 
         return res
-    
-    findNumberOfLIS([1,3,5,4,7])
+
+    findNumberOfLIS([1, 3, 5, 4, 7])

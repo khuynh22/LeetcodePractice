@@ -4,7 +4,7 @@ class Solution:
         for i in range(len(s)):
             if s[i].isalnum():
                 convert += s[i].lower()
-        
+
         return convert == convert[::-1]
 
 

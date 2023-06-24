@@ -15,6 +15,7 @@ class Solution:
                 wordMap[pattern[i]] = sArr[i]
         return True
 
+
 s = Solution()
 print(s.wordPattern("abba", "dog cat cat dog"))
 print(s.wordPattern("abba", "dog cat cat fish"))

@@ -5,7 +5,8 @@ class Solution:
             if len(citations) - i <= v:
                 return len(citations) - i
         return 0
-    
+
+
 s = Solution()
-print(s.hIndex([3,0,6,1,5]))
-print(s.hIndex([1,3,1]))
+print(s.hIndex([3, 0, 6, 1, 5]))
+print(s.hIndex([1, 3, 1]))

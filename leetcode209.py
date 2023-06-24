@@ -11,9 +11,9 @@ class Solution:
                 l += 1
 
         return int(res) if res != float('inf') else 0
-    
+
+
 s = Solution()
-print(s.minSubArrayLen(7, [2,3,1,2,4,3]))
-print(s.minSubArrayLen(4, [1,4,4]))
-print(s.minSubArrayLen(11, [1,1,1,1,1,1,1,1]))
-            
+print(s.minSubArrayLen(7, [2, 3, 1, 2, 4, 3]))
+print(s.minSubArrayLen(4, [1, 4, 4]))
+print(s.minSubArrayLen(11, [1, 1, 1, 1, 1, 1, 1, 1]))

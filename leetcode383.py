@@ -13,6 +13,7 @@ class Solution:
                 return False
         return True
 
+
 s = Solution()
 print(s.canConstruct("a", "b"))
 print(s.canConstruct("aa", "ab"))
