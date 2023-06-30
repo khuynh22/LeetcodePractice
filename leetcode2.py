@@ -5,49 +5,62 @@
 #         self.next = next
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        store = 0
-        curr1 = l1
-        curr2 = l2
         res = ListNode()
-        currRes = res
-        while curr1 != None and curr2 != None:
-            if curr1.val + curr2.val + store < 10:
-                currRes.val = curr1.val + curr2.val + store
-                store = 0
+        resRet = res
+        plusOne = 0
+        p1 = l1
+        p2 = l2
+        while p1 and p2:
+            res.val = p1.val + p2.val + plusOne
+            if res.val >= 10:
+                res.val -= 10
+                plusOne = 1
             else:
-                currRes.val = curr1.val + curr2.val + store - 10
-                store = 1
-            if curr1.next == None or curr2.next == None:
-                currRes.next = None
+                plusOne = 0
+
+            if p1.next == None and p2.next == None:
+                res.next = None
             else:
-                currRes.next = ListNode()
-                currRes = currRes.next
-            curr1 = curr1.next
-            curr2 = curr2.next
-        
-        while curr1 != None:
-            currRes.next = ListNode()
-            currRes = currRes.next
-            if curr1.val + store < 10:
-                currRes.val = curr1.val + store
-                store = 0
-            else:
-                currRes.val = curr1.val + store - 10
-                store = 1
-            curr1 = curr1.next
+                res.next = ListNode()
+                res = res.next
+
+            p1 = p1.next
+            p2 = p2.next
+
+        while p1:
+            res.val = p1.val + plusOne
             
-        while curr2 != None:
-            currRes.next = ListNode()
-            currRes = currRes.next
-            if curr2.val + store < 10:
-                currRes.val = curr2.val + store
-                store = 0
+            if res.val >= 10:
+                res.val -= 10
+                plusOne = 1
             else:
-                currRes.val = curr2.val + store - 10
-                store = 1
-            curr2 = curr2.next
-        if store == 1:
-            currRes.next = ListNode()
-            currRes = currRes.next
-            currRes.val = 1
-        return res
+                plusOne = 0
+
+            if p1.next == None:
+                res.next = None
+            else:
+                res.next = ListNode()
+                res = res.next
+            p1 = p1.next
+
+        
+
+        while p2:
+            res.val = p2.val + plusOne
+            
+            if res.val >= 10:
+                res.val -= 10
+                plusOne = 1
+            else:
+                plusOne = 0
+
+            if p2.next == None:
+                res.next = None
+            else:
+                res.next = ListNode()
+                res = res.next
+            p2 = p2.next
+
+        if plusOne == 1:
+            res.next = ListNode(1)
+        return resRet
