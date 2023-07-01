@@ -7,17 +7,18 @@ class Node:
         self.random = random
 """
 
+
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         if head == None:
             return None
-        
+
         mapNode = {}
         curr = head
         while curr:
             mapNode[curr] = Node(curr.val, None, None)
             curr = curr.next
-        
+
         curr = head
 
         while curr:
@@ -26,6 +27,6 @@ class Solution:
 
             if curr.random:
                 mapNode[curr].random = mapNode[curr.random]
-            
+
             curr = curr.next
         return mapNode[head]
